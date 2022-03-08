@@ -11,4 +11,10 @@ function calcular_distacia_maxima(velocidad_inicial,angulo) {
 }
 
 
-console.log(calcular_distacia_maxima(10, 45));
+let entrada = require('./entrada.json');
+console.log(entrada[0]);
+
+for (let caso of entrada) {
+    console.log(`Altura máxima caso ${entrada.indexOf(caso) + 1}:  ${calcular_altura_maxima(caso.v0, caso.alpha).toFixed(2)} m.`);
+    console.log(`Distancia máxima caso ${entrada.indexOf(caso) + 1}:  ${calcular_distacia_maxima(caso.v0, caso.alpha).toFixed(2)} m.`);
+}
